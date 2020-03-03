@@ -1,17 +1,15 @@
 # This config needs SpringCloudConfigServerApplication (spring-cloud-config-server) UP && Running
 # Also needs "${HOME}/src/github/configrepo" with the values updated
+server:
+  port: ${server.port}
+
 my:
   greeting: ${greeting}
   message: ${message}
 
-server:
-  port: 8980
-
 spring:
-  profiles:
-    active: dev
   application:
-    name: spring-cloud-config-client
+    name: spring-cloud-config-client-dev
   cloud:
     config:
       uri: http://localhost:${config.port}
@@ -22,3 +20,4 @@ management:
     web:
       exposure:
         include: "*"
+
