@@ -7,4 +7,11 @@ server:
 spring:
   cloud:
     config:
-      uri: http://localhost:8888
+      uri: http://localhost:${config.port}
+
+# Actuator allow all for dev
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
