@@ -1,0 +1,5 @@
+client:
+  greeting: Hello World!
+
+server:
+  port: 8089
