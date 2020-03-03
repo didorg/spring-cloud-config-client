@@ -1,5 +1,10 @@
-client:
-  greeting: Hello World!
+my:
+  greeting: Hello World from spring-cloud-config-clien!
 
 server:
   port: 8089
+
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
